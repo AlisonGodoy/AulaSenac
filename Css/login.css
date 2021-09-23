@@ -1,0 +1,11 @@
+#login input[type=text], input[type=password] {
+	      width: 30%;
+	      padding: 12px 20px;
+	      margin: 8px 0;
+	      margin-left: 480px;
+	      display: inline-block;
+	      border: 1px solid #ccc;
+	      border-radius: 4px;
+	      box-sizing: border-box;
+	      font-family: "Lucida Console", Courier, monospace;
+	    }

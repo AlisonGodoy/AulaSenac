@@ -1,0 +1,24 @@
+
+function showUser(fname,lnasc,lsexo){
+			if(fname=="")  {
+			  document.getElementById("txtHint").innerHTML="<b>Usuário não encontrado</b>";
+			  return;
+			  } 
+			if (window.XMLHttpRequest)  { //Condição para encontrar o servidor
+			     xmlhttp = new XMLHttpRequest();
+			  } 
+
+			  xmlhttp.onreadystatechange=function() 
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+			    }
+			  }
+			xmlhttp.open("GET","../controle/insereAluno.php?fname="+fname+"&lnasc="+lnasc+"&lsexo="+lsexo,true);
+			xmlhttp.send();
+
+			if(txtHint=true){
+				alert("Cadastrado com sucesso")
+				location.href= '../visao/listarAlunos.php';
+			}
+			}
